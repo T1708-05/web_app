@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: demo-flask-backdoor
+    env: docker
+    plan: free          # hoặc starter tuỳ bạn
+    region: oregon      # tuỳ chọn
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      # Khuyến nghị: chỉnh app.py đọc SECRET_KEY từ env (xem ghi chú bên dưới),
+      # rồi set biến sau:
+      - key: SECRET_KEY
+        value: "change-me-in-render"
+    disk:
+      name: app-data
+      mountPath: /app/data
+      sizeGB: 1
