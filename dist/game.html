@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Game tải file</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+    #btn { padding: 20px; font-size: 18px; cursor: pointer; }
+    #download { display: none; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>click để tải file game hay này 🎉</h1>
+  <button id="btn">Click!</button>
+  <p id="count">licklcikclick</p>
+
+  <!-- Nút tải file -->
+  <a id="download" href="game.exe" download>📂 Tải file của bạn</a>
+
+  <script>
+    let count = 0;
+    const btn = document.getElementById("btn");
+    const counter = document.getElementById("count");
+    const download = document.getElementById("download");
+
+    btn.addEventListener("click", () => {
+      count++;
+      counter.textContent = "Số lần click: " + count;
+      if (count >= 0) {
+        download.style.display = "block";
+        btn.disabled = true;
+        btn.textContent = "Hoàn thành!";
+      }
+    });
+  </script>
+</body>
+</html>
