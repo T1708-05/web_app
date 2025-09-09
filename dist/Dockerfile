@@ -1,11 +1,14 @@
-# Sử dụng nginx image để chạy web tĩnh
+# Sử dụng nginx image
 FROM nginx:alpine
 
-# Copy file web vào thư mục mặc định của nginx
+# Xóa file mặc định của nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy toàn bộ code web vào thư mục nginx
 COPY . /usr/share/nginx/html
 
-# Mở cổng 80
+# Expose port 80
 EXPOSE 80
 
-# Lệnh khởi động
+# Khởi động nginx
 CMD ["nginx", "-g", "daemon off;"]
