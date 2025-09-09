@@ -273,11 +273,9 @@ def home():
         {extra}
       </div>
       <div class="card half">
-        <h3 style="margin:0 0 8px 0">Mẹo nhanh</h3>
-        <ul style="margin:6px 0 0 18px; color:#334155;">
-          <li>Tải lên file có chứa chuỗi <code>admin:admin123</code> để truy cập trang Quản trị (demo backdoor).</li>
+        <h3 style="margin:0 0 8px 0">p/s</h3>
+        <ul style="margin:6px 0 0 18px; color:#334155;">   
           <li>Trong trang Quản trị, bạn có thể xem “bìa sách ẩn”.</li>
-          <li>Đây chỉ là bản demo phục vụ học CTF — không dùng trên Internet.</li>
         </ul>
       </div>
     </div>
